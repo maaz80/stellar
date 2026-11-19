@@ -1,0 +1,162 @@
+@import "tailwindcss";
+
+@font-face {
+  font-family: "General Sans";
+  src: url("/fonts/general-sans-regular.woff2") format("woff2");
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "General Sans";
+  src: url("/fonts/general-sans-medium.woff2") format("woff2");
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "General Sans";
+  src: url("/fonts/general-sans-semibold.woff2") format("woff2");
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+}
+
+:root {
+  --background: #ffffff;
+  --foreground: #171717;
+  --font-general-sans: "General Sans";
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: var(--font-general-sans);
+  --font-mono: var(--font-geist-mono);
+  --font-serif: var(--font-playfair);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0a0a0a;
+    --foreground: #ededed;
+  }
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-general-sans), Arial, sans-serif;
+}
+
+.mobile-menu-scroll {
+  scrollbar-width: none;
+}
+
+.mobile-menu-scroll::-webkit-scrollbar {
+  display: none;
+}
+
+.rolling-text-letter {
+  display: inline-block;
+  height: 1.5rem;
+  overflow: hidden;
+}
+
+.rolling-text-letter-track {
+  display: flex;
+  flex-direction: column;
+  transition:
+    transform 1060ms cubic-bezier(0.22, 1, 0.36, 1),
+    opacity 240ms ease;
+  transition-delay: calc(var(--letter-index) * 4ms);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    scroll-behavior: auto !important;
+  }
+
+  .rolling-text-letter-track {
+    transition: none;
+  }
+
+  .rolling-text-link:hover .rolling-text-letter-track,
+  .rolling-text-link:focus-visible .rolling-text-letter-track {
+    transform: none;
+  }
+}
+
+.rolling-text-link {
+  transition:
+    border-radius 320ms cubic-bezier(0.25, 1, 0.5, 1),
+    background-color 260ms ease,
+    border-color 260ms ease,
+    color 260ms ease,
+    box-shadow 260ms ease;
+}
+
+.rolling-text-link:hover,
+.rolling-text-link:focus-visible {
+  border-bottom-left-radius: 1.55rem !important; /* expands roundness on hover */
+  border-top-right-radius: 1.55rem !important;   /* expands roundness on hover */
+}
+
+.rolling-text-link:hover .rolling-text-letter-track,
+.rolling-text-link:focus-visible .rolling-text-letter-track {
+  transform: translateY(-50%);
+}
+
+.rolling-text-link--once .rolling-text-letter-track {
+  transition:
+    transform 320ms cubic-bezier(0.22, 1, 0.36, 1),
+    opacity 240ms ease;
+  transition-delay: calc(var(--letter-index) * 18ms);
+}
+
+.rolling-text-link--once.is-rolled .rolling-text-letter-track {
+  transform: translateY(-50%);
+}
+
+.link-underline-sweep {
+  position: relative;
+  display: inline-block;
+  width: fit-content;
+}
+
+.link-underline-sweep::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -2px;
+  width: 100%;
+  height: 1px;
+  background-color: currentColor;
+  transform: scaleX(0);
+  transform-origin: right;
+  transition: transform 340ms cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.link-underline-sweep:hover::after,
+.link-underline-sweep:focus-visible::after {
+  transform: scaleX(1);
+  transform-origin: left;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .link-underline-sweep::after {
+    transition: none;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .rolling-text-link--once.is-rolled .rolling-text-letter-track {
+    transform: none;
+  }
+}
