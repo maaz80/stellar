@@ -107,7 +107,7 @@ export default function ContactSection() {
       ref={sectionRef}
       id="contact"
       aria-labelledby="contact-title"
-      className="relative flex h-screen flex-col overflow-hidden bg-[#dce6f5]"
+      className="relative flex h-[70vh] md:h-screen flex-col overflow-hidden bg-[#dce6f5]"
     >
       {/* Desktop BG — hidden on mobile */}
       <div
