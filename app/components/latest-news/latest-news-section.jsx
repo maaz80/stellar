@@ -92,7 +92,7 @@ export default function LatestNewsSection() {
     const articles = section.querySelectorAll("[data-news-article]");
 
     const context = gsap.context(() => {
-      // Heading letters animate up — trigger at 20% of viewport
+      // Heading letters animate up — trigger at 25% section visibility (top 75% of viewport)
       gsap.fromTo(
         headingLetters,
         { autoAlpha: 0, yPercent: 120, rotateX: 28 },
@@ -105,7 +105,7 @@ export default function LatestNewsSection() {
           ease: "power3.out",
           scrollTrigger: {
             trigger: section,
-            start: "top 20%",
+            start: "top 75%",
             once: true,
           },
         },

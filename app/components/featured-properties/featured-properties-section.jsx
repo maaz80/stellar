@@ -268,7 +268,7 @@ export default function FeaturedPropertiesSection() {
         <article
           data-feature-card
           aria-label="Featured property"
-          className="relative z-20 flex h-[min(47.6svh,25.2rem)] w-[min(21rem,calc(100vw-4rem))] flex-col bg-white px-3 pt-4 pb-3 text-center text-[#111111] will-change-transform sm:h-[min(82svh,44rem)] sm:w-[min(25rem,calc(100vw-3rem))] sm:px-8 sm:pt-7 sm:pb-5"
+          className="relative z-20 flex h-[min(57.6svh,25.2rem)] w-[min(21rem,calc(100vw-4rem))] flex-col bg-white px-3 pt-4 pb-3 text-center text-[#111111] will-change-transform sm:h-[min(82svh,44rem)] sm:w-[min(25rem,calc(100vw-3rem))] sm:px-8 sm:pt-7 sm:pb-5"
         >
           <h2 className="shrink-0 text-[clamp(2rem,4vw,3.2rem)] leading-[0.98] tracking-[-0.06em]">
             Featured
