@@ -230,7 +230,7 @@ export default function LatestNewsSection() {
           <span className="align-bottom">
             <AnimatedHeadingWord text="Latest" className="mr-[0.14em]" />
           </span>
-          <span className="align-bottom font-(family-name:--font-playfair) font-normal italic">
+          <span className="align-bottom font-(family-name:--font-playfair) font-medium italic">
             <AnimatedHeadingWord text="news" />
           </span>
         </h2>

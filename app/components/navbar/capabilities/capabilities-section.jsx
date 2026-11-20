@@ -256,7 +256,7 @@ export default function CapabilitiesSection() {
             className="text-[clamp(2.5rem,5vw,4.5rem)] leading-[0.98] font-medium tracking-[-0.065em]"
           >
             Our{" "}
-            <span className="font-(family-name:--font-playfair) font-normal italic">
+            <span className="font-(family-name:--font-playfair) font-medium italic">
               capabilities
             </span>
           </h2>

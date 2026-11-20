@@ -285,7 +285,7 @@ export default function StellarHero() {
               </span>{" "}
               <span
                 aria-label="home"
-                className="mr-[-0.18em] inline-block overflow-hidden pr-[0.18em] align-baseline font-(family-name:--font-playfair) font-normal italic"
+                className="mr-[-0.18em] inline-block overflow-hidden pr-[0.18em] align-baseline font-(family-name:--font-playfair) font-medium italic"
               >
                 {"home".split("").map((letter, index) => (
                   <span

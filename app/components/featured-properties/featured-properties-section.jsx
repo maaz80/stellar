@@ -272,7 +272,7 @@ export default function FeaturedPropertiesSection() {
         >
           <h2 className="shrink-0 text-[clamp(2rem,4vw,3.2rem)] leading-[0.98] tracking-[-0.06em]">
             Featured
-            <span className="block font-(family-name:--font-playfair) font-normal italic">
+            <span className="block font-(family-name:--font-playfair) font-medium italic">
               properties
             </span>
           </h2>

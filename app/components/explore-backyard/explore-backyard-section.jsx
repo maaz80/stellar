@@ -335,7 +335,7 @@ export default function ExploreBackyardSection() {
             <span
               data-backyard-italic-line
               aria-label="backyard"
-              className="block overflow-hidden pb-[0.14em] font-(family-name:--font-playfair) italic"
+              className="block overflow-hidden pb-[0.14em] font-(family-name:--font-playfair) font-medium italic"
             >
               {Array.from("backyard").map((letter, index) => (
                 <span

@@ -24,7 +24,7 @@ function ItalicWord({ children }) {
   return (
     <span
       aria-label={children}
-      className="font-(family-name:--font-playfair) font-normal italic"
+      className="font-(family-name:--font-playfair) font-medium italic"
     >
       {Array.from(children).map((letter, index) => (
         <span

@@ -23,7 +23,7 @@ function ItalicLetters({ text, className = "" }) {
   return (
     <span
       aria-label={text}
-      className={`font-serif font-normal italic inline-block ${className}`}
+      className={`font-serif font-medium italic inline-block ${className}`}
     >
       {text.split("").map((letter, index) => (
         <span

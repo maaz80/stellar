@@ -22,7 +22,7 @@ function ItalicLetters({ text }) {
   return (
     <span
       aria-label={text}
-      className="font-(family-name:--font-playfair) font-normal italic"
+      className="font-(family-name:--font-playfair) font-medium italic"
     >
       {text.split("").map((letter, index) => (
         <span
