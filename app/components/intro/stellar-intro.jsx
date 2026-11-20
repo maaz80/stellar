@@ -50,7 +50,7 @@ export default function StellarIntro() {
           const scaleX = bounds.width / 80;
           const firstLetterCenter = bounds.left + 12.35 * scaleX;
           const mobileOffset = window.matchMedia("(max-width: 639px)").matches
-            ? 40
+            ? 30
             : 0;
           return (
             window.innerWidth / 2 + mobileOffset - firstLetterCenter
