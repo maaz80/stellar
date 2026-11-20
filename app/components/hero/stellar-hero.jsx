@@ -242,7 +242,7 @@ export default function StellarHero() {
   return (
     <section
       ref={heroRef}
-      className="relative flex min-h-[90vh] md:min-h-screen flex-col overflow-hidden bg-[#272421] text-white"
+      className="relative flex min-h-[93vh] md:min-h-screen flex-col overflow-hidden bg-[#272421] text-white"
     >
       <video
         className="absolute inset-0 h-full w-full object-cover"

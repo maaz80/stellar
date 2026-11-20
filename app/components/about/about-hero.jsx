@@ -111,7 +111,7 @@ export default function AboutHero() {
   return (
     <section
       ref={heroRef}
-      className="relative flex h-[90vh] md:h-screen flex-col overflow-hidden bg-[#272421] text-white"
+      className="relative flex h-[93vh] md:h-screen flex-col overflow-hidden bg-[#272421] text-white"
     >
       {/* Background Autoplaying Loop Video */}
       <video
