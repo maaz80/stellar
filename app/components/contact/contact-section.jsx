@@ -146,7 +146,7 @@ export default function ContactSection() {
           <span className="block overflow-hidden">
             <span data-contact-line className="block">
               Let&rsquo;s&nbsp;
-              <span className="font-(family-name:--font-playfair) font-normal italic">
+              <span className="font-serif font-normal italic">
                 talk
               </span>
             </span>
